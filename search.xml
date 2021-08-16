@@ -598,8 +598,6 @@
       
         <tags>
             
-            <tag> 1092 </tag>
-            
             <tag> down to earth </tag>
             
             <tag> song </tag>
@@ -609,6 +607,8 @@
             <tag> paper </tag>
             
             <tag> english </tag>
+            
+            <tag> 1092 </tag>
             
         </tags>
       
@@ -732,8 +732,6 @@
       
         <tags>
             
-            <tag> contest </tag>
-            
             <tag> APP </tag>
             
             <tag> Ionic </tag>
@@ -745,6 +743,8 @@
             <tag> Google map API </tag>
             
             <tag> YZU </tag>
+            
+            <tag> contest </tag>
             
             <tag> typescript </tag>
             
@@ -802,6 +802,8 @@
       
         <tags>
             
+            <tag> 1092 </tag>
+            
             <tag> mips </tag>
             
             <tag> gcd </tag>
@@ -809,8 +811,6 @@
             <tag> c++ </tag>
             
             <tag> recursive </tag>
-            
-            <tag> 1092 </tag>
             
             <tag> 計組 </tag>
             
@@ -872,11 +872,11 @@
       
         <tags>
             
+            <tag> contest </tag>
+            
             <tag> GICS </tag>
             
             <tag> Information Security </tag>
-            
-            <tag> contest </tag>
             
             <tag> MOST </tag>
             
