@@ -1,6 +1,6 @@
 AV.init({
-    appId: 'Hqf36WMURuYGJsqzdfWcmdRT-MdYXbMMI',
-    appKey: '6zcIlu48MKz3eBl4QjGqPxmN'
+    appId: "Hqf36WMURuYGJsqzdfWcmdRT-MdYXbMMI",
+    appKey: "6zcIlu48MKz3eBl4QjGqPxmN"
 });
 
 var flag = 0;
