@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Convolution Neural Network 小小閱讀筆記</title>
+      <link href="/posts/3829287381/"/>
+      <url>/posts/3829287381/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>這篇文章是我學習cnn整理的一些筆記，文章(見閱讀清單)內容都是由網路上整理而來的，不是教學文，只是一篇紀錄自己學習的文章還有整理的筆記，讓自己複習時方便而已，如果想閱讀的話還是建議去看原本的文章(已放在閱讀清單-文末)呦～會比較完整！🥰</p><h2 id="Convolution-Neural-Network"><a href="#Convolution-Neural-Network" class="headerlink" title="Convolution Neural Network"></a>Convolution Neural Network</h2><p>卷積概念圖</p><p><img src="/img/article/cnn/9.jpg" alt="cnn"></p><p><img src="/img/article/cnn/10.jpg" alt="cnn"></p><p>簡單來說，圖片經過各兩次的Convolution, Pooling, Fully Connected就是CNN的架構了！</p><h2 id="Convolution-卷積"><a href="#Convolution-卷積" class="headerlink" title="Convolution(卷積)"></a>Convolution(卷積)</h2><p><img src="/img/article/cnn/1.jpg" alt="cnn"></p><p>一般如果在網路上google卷積是什麼的話你會看到上圖左邊的這個公式，而這個公式其實代表的就是“卷”跟”積“兩個字分別對應的意思。</p><p><strong>“卷”: 對g函數進行翻轉</strong><br><strong>“積”: 把g函數平移到n，這個位置對兩個函數的對應點相乘後相加</strong></p><p>兩個函數的卷基本質上就是先將一個函數翻轉，然後進行滑動疊加。<br>(疊加在連續是指對兩個函數乘積求積分，離散是指加權求和)<br>整體看來過程就是翻轉、滑動，疊加一直重複，多次滑動得到的一系列疊加構成卷積函數。</p><p>雖然很複雜，但是如果用例子來看就會好懂一點～</p><p><img src="/img/article/cnn/2.jpg" alt="cnn"></p><p>如果以丟骰子來當例子解釋卷積，我們今天要求兩個骰子點數和為四的機率，有兩個函數f和g，f(1)是指第一個骰子出現點數一的機率，以此類推，g代表第二個骰子，那我們可以試著把它寫成卷積函數的形式</p><p><img src="/img/article/cnn/3.jpg" alt="cnn"></p><p>但為了方便，先將g翻轉一下，這樣就可以方便的去推斷骰子和為n的機率了，<br>圖中若是每個點數出現的機率相同那我們就可以推斷出兩個骰子的點數和為七的機率最大。</p><p>還有很多應用舉例，像是做饅頭，假設有一台作饅頭的機器會不斷的生產饅頭，設有一個f函數表示一天生產的饅頭總數，那把f積分起來就可以知道一段時間內生產的饅頭數，在假設有一個函數g是紀錄一段時間內有幾個饅頭會壞掉，這樣透過這兩個函數的卷積我們就可以知道一天後饅頭會腐敗幾個，就可以去調整饅頭生產的速度，這是連續卷積的例子。</p><p>而卷積運用在影像處理的例子也是很常見的<br>舉一個大家最常接觸到的例子，大家肯定都有用過修圖軟體，而那些修圖軟體的銳化、浮雕之類的美術特效就是用卷積達成的。<br>每張圖片都可以表示成由pixel組成的陣列，我們之所以可以對圖片作出不同效果是因為我們在對圖片作不同的卷積，我們會不斷的擷取對資料的特徵，再對特徵進行分類或是預估的動作。</p><p><img src="/img/article/cnn/4.jpg" alt="cnn"></p><p>之所以我們可以做過出不同的美圖效果，是在對圖片做不同的卷積(銳化和模糊或是邊緣增強等操作)，我們用銳化來舉例好了，銳化過後的圖片，我們可以看出圖片裡面物件的”邊緣”被強化了，而”邊緣”就是圖片的其中一個有效的特徵，所以我們來思考一下，不同的卷積動作是不是就可以從圖片擷取出各種不同的特徵，像是”邊緣”，”曲線”等等的特徵呢？然後我們再去對特徵做選擇，並且利用特徵來做分類跟預估，沒錯！！所以這就是為什麼Convolution Neural Network的由來，卷積就是在對圖片去做擷取特徵的動作，找出最好的特徵最後再進行分類。</p><h3 id="卷積如何達成？"><a href="#卷積如何達成？" class="headerlink" title="卷積如何達成？"></a>卷積如何達成？</h3><p>將3X3的矩陣在圖片上的像素一步一步移動(在卷積層中移動的步數稱為Stride步數)，在每個位置的時候，計算兩個矩陣相對元素的乘積並相加，輸出一個值然後放在一個矩陣(右邊粉色的矩陣)，這就是基本的卷積運算。<br>橘色的矩陣就是所謂的”卷積核(Kernel)”，也是所謂的Filter，然而美圖修修也就是用不同的Kernel做卷積所達成的。</p><p><img src="/img/article/cnn/5.gif" alt="cnn"></p><div class="note modern"><p>📌如果以上面那種運算方式，是不是每做一次卷積，出來後的特徵圖會越來越小呢？原本5X5的圖片跟3X3的矩陣做卷積出來後的圖變成3X3的了，如果不想經過卷積後圖變小的話，有個技術是Zero Padding，他可以將圖片向外擴張補0後再進行卷積，這樣卷積過後的特徵圖就會跟原本的圖一樣了</p></div><h3 id="用LeNet講解"><a href="#用LeNet講解" class="headerlink" title="用LeNet講解"></a>用LeNet講解</h3><p><img src="/img/article/cnn/6.jpg" alt="cnn"></p><p>第一層的卷積層，Input為32x32的image，然而經過Convolutions的時候出現6張28X28的Feature map…</p><p><strong>為什麼會出現6張Feature map呢？</strong></p><p>答：就是用6個”不同的卷積核”去對Input 做卷積</p><div class="note default no-icon flat"><p>深度 = 卷積核數量</p></div><p>第一個卷積層出來後的feature map為 6張，因為卷積核數量為6<br>第二個卷積層出來後的feature map為16張，因為卷積核數量為16</p><p><strong>第二次的卷積層出來的深度怎麼不是6*16呢？</strong></p><p>答：對於卷積核來說，是有深度的，看下面這張圖應該就很好理解，然而第二個卷積層就的卷積核就是有深度的，16個深度為6的卷積核，所以出來的feature map深度就是16</p><p><img src="/img/article/cnn/7.gif" alt="cnn"></p><p><strong>那為什麼做完卷積後的每一個Feature map都是28X28呢？</strong></p><p>3X3的卷積核對5X5的圖片出來的Feature map是3X3，因為卷積核由最左邊到最右邊只能走3步，這是步數為1的情況，那如果步數為2的情況呢？出來的Feature map是2X2，我們可以推測出一個公式</p><div class="note default no-icon flat"><p>Feature map width=[(Original width-Kernel width)/(Stride+1)]+1</p></div><p>所以5X5的Kernel，步數為1的情況出來的Feature map 就是28X28(Input為32X32 沒有做Zero Padding的情況下)</p><h2 id="Pooling-池化"><a href="#Pooling-池化" class="headerlink" title="Pooling(池化)"></a>Pooling(池化)</h2><p>Pooling，也可以稱為Subsampling(采樣)，Pooling常用的方式有二種，Max Pooling，Mean Pooling，池化層跟卷積層一樣，有個Kernel(大多為2X2)，對卷積層出來的feature map做運算</p><p><img src="/img/article/cnn/8.jpg" alt="cnn"></p><p>這張圖是利用2X2的Kernel 在image上用”步數”2(Stride)進行Pooling的基本運算，沒錯，就是很直觀也很簡單的，在Kernel經過的地方，取出最大值，就達成降維了。</p><p><strong>為什麼要做池化層?</strong></p><ol><li><p>對特徵圖(Feature map)降維，並且保留重要的特徵，參數減少，可防止Overfitting。<br>越複雜或是參數越多的模型容易造成Overfitting，Pooling層有效降低我們的參數，而且還可以保留重要的特徵，也可以使模型對圖像微小的變換或是一些失真變得更沉穩(因為我們取了Kernel的最大值，微小的失真並不會改變結果，最大值還是最大值)。<a href="https://medium.com/%E9%9B%9E%E9%9B%9E%E8%88%87%E5%85%94%E5%85%94%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%96%E7%95%8C/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-ml-note-overfitting-%E9%81%8E%E5%BA%A6%E5%AD%B8%E7%BF%92-6196902481bb">more</a></p></li><li><p>卷積跟Pooling後可對”微小”的變化保持不變性(invariance)， 旋轉、平移、伸縮等的不變性。<br><a href="https://www.zhihu.com/question/36686900">more</a></p></li></ol><h2 id="Fully-Connected-Layer-全連接層"><a href="#Fully-Connected-Layer-全連接層" class="headerlink" title="Fully Connected Layer(全連接層)"></a>Fully Connected Layer(全連接層)</h2><p>基本上全連接層的部分就是將之前的結果平坦化之後接到最基本的神經網絡了</p><p><img src="/img/article/cnn/11.jpg" alt="cnn"><br><img src="/img/article/cnn/12.jpg" alt="cnn"><br><img src="/img/article/cnn/13.jpg" alt="cnn"></p><h2 id="閱讀清單"><a href="#閱讀清單" class="headerlink" title="閱讀清單"></a>閱讀清單</h2><ol><li><a href="https://medium.com/%E9%9B%9E%E9%9B%9E%E8%88%87%E5%85%94%E5%85%94%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%96%E7%95%8C/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-ml-note-convolution-neural-network-%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF-bfa8566744e9">[機器學習 ML NOTE]Convolution Neural Network 卷積神經網路</a></li><li><a href="https://medium.com/jameslearningnote/%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-%E7%AC%AC5-1%E8%AC%9B-%E5%8D%B7%E7%A9%8D%E7%A5%9E%E7%B6%93%E7%B6%B2%E7%B5%A1%E4%BB%8B%E7%B4%B9-convolutional-neural-network-4f8249d65d4f">[資料分析&amp;機器學習] 第5.1講: 卷積神經網絡介紹(Convolutional Neural Network)</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Share </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cnn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Discord音樂機器人實作分享</title>
       <link href="/posts/1023941887/"/>
       <url>/posts/1023941887/</url>
@@ -13,7 +38,7 @@
       
       <categories>
           
-          <category> Share· </category>
+          <category> Share </category>
           
       </categories>
       
@@ -214,7 +239,7 @@
       <link href="/posts/1693332915/"/>
       <url>/posts/1693332915/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#x79;&#111;&#x75;&#114;&#x5f;&#x65;&#x6d;&#97;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x79;&#111;&#x75;&#114;&#x5f;&#x65;&#x6d;&#97;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#99;&#111;&#x6d;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#121;&#111;&#117;&#114;&#x5f;&#x65;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#121;&#111;&#117;&#114;&#x5f;&#x65;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
       
       
       <categories>
@@ -469,11 +494,11 @@
             
             <tag> paper </tag>
             
+            <tag> algorithm </tag>
+            
             <tag> lab </tag>
             
             <tag> face alignment </tag>
-            
-            <tag> algorithm </tag>
             
         </tags>
       
@@ -831,8 +856,6 @@
       
         <tags>
             
-            <tag> 1092 </tag>
-            
             <tag> down to earth </tag>
             
             <tag> song </tag>
@@ -842,6 +865,8 @@
             <tag> paper </tag>
             
             <tag> english </tag>
+            
+            <tag> 1092 </tag>
             
         </tags>
       
@@ -870,9 +895,9 @@
             
             <tag> java </tag>
             
-            <tag> painter </tag>
-            
             <tag> awt </tag>
+            
+            <tag> painter </tag>
             
         </tags>
       
@@ -901,9 +926,9 @@
             
             <tag> java </tag>
             
-            <tag> painter </tag>
-            
             <tag> awt </tag>
+            
+            <tag> painter </tag>
             
         </tags>
       
@@ -1035,6 +1060,8 @@
       
         <tags>
             
+            <tag> 1092 </tag>
+            
             <tag> mips </tag>
             
             <tag> gcd </tag>
@@ -1042,8 +1069,6 @@
             <tag> c++ </tag>
             
             <tag> recursive </tag>
-            
-            <tag> 1092 </tag>
             
             <tag> 計組 </tag>
             
@@ -1142,13 +1167,13 @@
             
             <tag> 1092 </tag>
             
-            <tag> algorithm </tag>
-            
             <tag> longest common subsequence </tag>
             
             <tag> Dynamic Programming </tag>
             
             <tag> LCS </tag>
+            
+            <tag> algorithm </tag>
             
             <tag> 演算法 </tag>
             
