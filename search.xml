@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>第一屆捷運盃黑客松-尋找黑捷客</title>
+      <link href="/posts/722493118/"/>
+      <url>/posts/722493118/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>競賽(官網已失效)： <a href="https://2021hackathon.metro.taipei/">第一屆捷運盃黑客松-尋找黑捷客</a></p><h2 id="計畫說明"><a href="#計畫說明" class="headerlink" title="計畫說明"></a>計畫說明</h2><p><code>捷運趴趴GO</code> (亞軍)</p><p><img src="/img/article/go/go.png" alt="app icon"></p><h3 id="計畫緣起"><a href="#計畫緣起" class="headerlink" title="計畫緣起"></a>計畫緣起</h3><p>台北捷運的日運載量大約落在213萬人次，在大眾交通工具系統中位居首位，大多數人的年齡大約落在15-39歲之間的年輕族群，這類族群也以觀光旅遊為大宗。<br>依據台北捷運官方手冊的統計，台北捷運在2019年三月時運載量突破了100億人次，台北捷運是台北都會區700萬人口及900萬觀光客最仰賴的交通工具。<br>觀光對台北捷運來說是重要的一環，對於那些來台北捷運觀光的旅客而說，他們會不了解周邊有什麼景點，所以通常都會上網搜尋。以我們大學生來說，假日時，常常會和朋友到台北出遊，可是因為交通因素，我們通常會選擇搭乘捷運，行程規劃也會以捷運周邊為主，但網路上的文章及分享通常頁面混亂、內容零星，也常常找到過時的評論。而且這些內容通常已經從主動分享變成直接的業配，造成無公正性及缺乏可比較性。像我們面對大量的雜訊、廣告，無法獲取真實有意義的資訊。<br>我們想到兩個可能的原因部落客可能因為內容不易被看見且無法獲得相應的回饋而導致創作慾望降低，此外，創作這些內容時間成本也蠻高的。</p><h3 id="計畫目的"><a href="#計畫目的" class="headerlink" title="計畫目的"></a>計畫目的</h3><p>因此我們想要提供可以輕鬆生產內容且推廣的平台、減少重複內容的出現、將產出內容的價值充分回饋給創作者。並且除了讓用戶方便取用之外，也可以真實支持到內容創作者跟店家。<br>我們的產品內容主要提供三種服務，首先第一個部分為旅遊推薦，藉由大家的分享讓旅客能找到適合自己的行程。再來是記錄行程，能夠將自己的旅程自動記錄下來，並分享到我們所設計的App上。最後是回饋機制，有良好的回饋機制能夠使創作者的動力提高。</p><h2 id="計畫構想"><a href="#計畫構想" class="headerlink" title="計畫構想"></a>計畫構想</h2><h3 id="計畫功能"><a href="#計畫功能" class="headerlink" title="計畫功能"></a>計畫功能</h3><ul><li>一打開App首先會看見我們系統所推薦的熱門行程，點選某一個行程後，會出現行程路線及交通工具</li><li>記錄行程的方式，先掃描車站QR Code啟動App並開始記錄，記錄行程時會自動記錄時間(系統時間)、地點(定位)以及判斷到達方式，回到車站再掃描一次QR Code結束紀錄並進入編輯行程頁面</li><li>結束紀錄之後，可以看到系統自動記錄的行程，即可進行編輯，例如: 增加景點，編輯時間、到達方式</li><li>再來是我們的特色AR導航，我們會在使用者導航的過程中，顯示商家的資訊以及限時優惠</li><li>我們想到可以在捷運站裡設置電子看板，能讓旅客與看板互動，看板的畫面是我們App的首頁，旅客可以掃描上方的QR Code進入我們的App，也可以掃描行程的QR Code進入行程畫面，最下方的兩個QR Code分別是紀錄行程跟結束紀錄</li></ul><h3 id="使用對象"><a href="#使用對象" class="headerlink" title="使用對象"></a>使用對象</h3><ul><li><p>生產者情境: 有一位Willy Wu他是一位旅遊達人喜歡分享自己的行程，但他的文章觸及率過低導致他沒有動力繼續創作，因此我們推薦他我們的App並教他如何使用<br>首先當他想要記錄旅程時，可以在捷運站掃描Qr Code啟動App開始記錄，過程中所記錄下來的軌跡會自動記載路程、所使用的交通方式以及停留的商家。回到車站或是到了別的站點可以掃碼結束旅程，並且在後續可以重新編輯路徑，刪除或新增站點，並且給予不同的站點推薦的指數與標籤。並進一步決定要公開共享路線或是私人傳遞給朋友。</p></li><li><p>使用者情境: 有一位Tiffany Green他喜歡城市旅遊，這次他到台北出差想順便在附近晃晃，但網路上的資料過時又龐大，他很難找到自己想要的行程，因此，我們向他介紹我們的App，首先他可以在捷運站裡的電子看板上或是打開我們的App搜尋想要的行程，找到想要的行程之後，按下導航鍵啟動旅程，導航過程中會顯示商家的資訊以及所提供的限時優惠，提供給旅客來做參考與使用。</p></li></ul><h2 id="計畫角色"><a href="#計畫角色" class="headerlink" title="計畫角色"></a>計畫角色</h2><p>我們APP的角色互動將分成4個部分生產者(旅遊達人)、使用者(旅客)、商家、捷運趴趴GO</p><ul><li>旅遊達人(旅程生產者): 旅遊達人透過親自造訪體驗，進而將旅遊經驗分享至平台上，以供遊客參考。若該行程得到不錯的反應，旅遊達人可以得到相對應的GOGO point也能獲得商家的廣告收益，讓創作動力提高</li></ul><ul><li>遊客(旅程消費者): 遊客可透過App或是電子看板選擇旅遊達人所分享行程，找到喜歡的行程後選擇導航可在路途中隨時接到商家資訊及限時優惠，如果喜歡這個行程，可以給旅遊達人按讚支持。</li></ul><ul><li><p>店家: 可以跟捷運趴趴GO合作，在電子看板上設置廣告來增加他的曝光度。在遊客導航中會設置限時優惠。那也會因旅客的按讚支持而間接的回饋給旅遊達人。</p></li><li><p>捷運趴趴GO: 為旅遊達人與遊客提供一個平台使用，結合捷運路線圖，透過旅遊達人的分享，給予遊客相對應的行程選擇。商家也多了一個平台能夠打廣告提高曝光度，捷運可以和趴趴GO合作。</p></li></ul><h2 id="計畫實現"><a href="#計畫實現" class="headerlink" title="計畫實現"></a>計畫實現</h2><p>App的前端我們預計會使用Flutter，後端使用Firebase做連接，導航部分會用Google Map API + ARcore，我們智能服務都是從後端伺服器的API做處理。</p><h2 id="效益評估"><a href="#效益評估" class="headerlink" title="效益評估"></a>效益評估</h2><ul><li>對於目前市場上兩個相似的產品funliday 及 gogoeasy，我們的產品在記錄行程此方面是全自動記錄的 可以省下不少時間及心力，旅程的景點是環繞捷運去做規劃的，捷運站關聯性會相較其他兩個來說還要高 且會給予旅遊達人點數回饋，我們也會和商家進行一些合作關係。</li><li>我們的廣告方式相較於其他雖然觸及範圍小但精準度高，適合捷運周邊商家，對於商家投放廣告上我們做了一些分析，捷運站內有著各式各樣的廣告，這些廣告雖然觸及大但是精準度卻是極低，對於商家來說想要投放這種廣告幾乎是遙不可及的，觀光客自然而然也無法輕易地接收到捷運附近商家的資訊，因此我們提供平台讓合作商家投放資訊給旅客，藉此媒合他們，當商家數量眾多時，其實可以創造和大公司一樣的效益，這邊是我們跟現有的廣告方式做比較，雖然我們的觸及範圍較小，但我們的觸及精準度和即時性會更高。</li></ul><div class="note primary modern"><p>GOGO point 主要就是由旅客的按讚數所得到的點數回饋 它可以兌換商家的優惠或是換取捷運的搭乘折扣</p></div><h2 id="計畫原型"><a href="#計畫原型" class="headerlink" title="計畫原型"></a>計畫原型</h2><p>[FigmaPrototype]](<a href="https://www.figma.com/proto/o7Ht8VZm2m0V7FOG2zyuw6/%E6%8D%B7%E9%81%8B%E8%B6%B4%E8%B6%B4go?node-id=10:2&amp;scaling=scale-down&amp;starting-point-node-id=10:2&amp;show-proto-sidebar=1">https://www.figma.com/proto/o7Ht8VZm2m0V7FOG2zyuw6/%E6%8D%B7%E9%81%8B%E8%B6%B4%E8%B6%B4go?node-id=10%3A2&amp;scaling=scale-down&amp;starting-point-node-id=10%3A2&amp;show-proto-sidebar=1</a>)</p><h2 id="決賽評審QA"><a href="#決賽評審QA" class="headerlink" title="決賽評審ＱＡ"></a>決賽評審ＱＡ</h2><ol><li>若是使用者有惡意行為出現，如何解決？（例如買榜）<br>我們可以採用兩種方式解決：1. 使用身份驗證及按讚行為的異常偵測，2. 使用類似medium平台的按愛心機制（每個帳號有一定額度的按讚度，再讓按讚度去除以按讚數則為該帳號一個讚的權重，則若是該帳號按讚越多，權重越低）</li><li>初期怎麼讓旅遊專家有動機，如何開啟整個生態圈？<br>花錢開啟生態圈是必然的，初期我們可以和熱門的部落格合作，請他們將旅程發布在平台上開啟整個生態圈。</li><li>著名平台kkday也是旅遊的平台，你們有何差異？<br>kkday內的旅程多屬於需開車到達的地方，而我們平台內的旅程均會圍繞整個捷運進行，因此我們平台內推送的行程對於捷運的黏著度會較kkday高出非常多。</li></ol><p>（還有一些問題忘記拉嗚嗚…)</p><h2 id="決賽簡報"><a href="#決賽簡報" class="headerlink" title="決賽簡報"></a>決賽簡報</h2><p><a href="/img/article/go/%E6%8D%B7%E9%81%8B%E8%B6%B4%E8%B6%B4GO.pptx">pdf</a></p><h2 id="相關報導"><a href="#相關報導" class="headerlink" title="相關報導"></a>相關報導</h2><ol><li><a href="https://www.cse.yzu.edu.tw/news/others?id=56">捷運盃黑客松-尋找黑捷客 - 元智資工獲亞軍</a></li><li><a href="https://tw.stock.yahoo.com/news/%E5%8C%97%E6%8D%B7%E9%A6%96%E5%B1%86%E5%B0%8B%E6%89%BE%E9%BB%91%E6%8D%B7%E5%AE%A2%E5%89%B5%E6%84%8F%E7%AB%B6%E8%B3%BD%E5%86%A0%E8%BB%8D%E6%8F%AD%E6%9B%89-115318930.html">北捷首屆尋找黑捷客創意競賽冠軍揭曉</a>（照片錯放錯啦嗚嗚嗚）</li><li><a href="https://www.cdns.com.tw/articles/507990">北捷首屆尋找黑捷客創意競賽冠軍揭曉</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Contest </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Google map API </tag>
+            
+            <tag> contest </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SwiftUI 時間管理大師</title>
       <link href="/posts/2910505575/"/>
       <url>/posts/2910505575/</url>
@@ -324,7 +351,7 @@
       <link href="/posts/1693332915/"/>
       <url>/posts/1693332915/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#121;&#111;&#x75;&#114;&#95;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;">&#121;&#111;&#x75;&#114;&#95;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#x6f;&#109;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#121;&#111;&#x75;&#x72;&#x5f;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#109;">&#121;&#111;&#x75;&#x72;&#x5f;&#x65;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#x65;&#x2e;&#x63;&#111;&#109;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
       
       
       <categories>
@@ -579,11 +606,11 @@
             
             <tag> paper </tag>
             
+            <tag> algorithm </tag>
+            
             <tag> lab </tag>
             
             <tag> face alignment </tag>
-            
-            <tag> algorithm </tag>
             
         </tags>
       
@@ -719,16 +746,16 @@
       
       <categories>
           
-          <category> Share </category>
+          <category> Note </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> terminal </tag>
-            
             <tag> command </tag>
+            
+            <tag> terminal </tag>
             
         </tags>
       
@@ -753,11 +780,11 @@
       
         <tags>
             
-            <tag> command </tag>
-            
             <tag> git </tag>
             
             <tag> tool </tag>
+            
+            <tag> command </tag>
             
         </tags>
       
@@ -871,9 +898,9 @@
             
             <tag> 1092 </tag>
             
-            <tag> project </tag>
-            
             <tag> game </tag>
+            
+            <tag> project </tag>
             
             <tag> veriog </tag>
             
@@ -912,11 +939,11 @@
             
             <tag> java </tag>
             
+            <tag> game </tag>
+            
             <tag> awt </tag>
             
             <tag> project </tag>
-            
-            <tag> game </tag>
             
         </tags>
       
@@ -941,8 +968,6 @@
       
         <tags>
             
-            <tag> 1092 </tag>
-            
             <tag> down to earth </tag>
             
             <tag> song </tag>
@@ -952,6 +977,8 @@
             <tag> paper </tag>
             
             <tag> english </tag>
+            
+            <tag> 1092 </tag>
             
         </tags>
       
@@ -1059,7 +1086,7 @@
     
     
     <entry>
-      <title>創意App競賽</title>
+      <title>元智大學第四屆創意APP實作競賽</title>
       <link href="/posts/1759354994/"/>
       <url>/posts/1759354994/</url>
       
@@ -1145,6 +1172,8 @@
       
         <tags>
             
+            <tag> 1092 </tag>
+            
             <tag> mips </tag>
             
             <tag> gcd </tag>
@@ -1152,8 +1181,6 @@
             <tag> c++ </tag>
             
             <tag> recursive </tag>
-            
-            <tag> 1092 </tag>
             
             <tag> 計組 </tag>
             
@@ -1252,13 +1279,13 @@
             
             <tag> 1092 </tag>
             
-            <tag> algorithm </tag>
-            
             <tag> longest common subsequence </tag>
             
             <tag> Dynamic Programming </tag>
             
             <tag> LCS </tag>
+            
+            <tag> algorithm </tag>
             
             <tag> 演算法 </tag>
             
@@ -1322,13 +1349,13 @@
             
             <tag> C++ </tag>
             
-            <tag> 1091 </tag>
-            
-            <tag> 資料結構 </tag>
-            
             <tag> json </tag>
             
             <tag> json search </tag>
+            
+            <tag> 1091 </tag>
+            
+            <tag> 資料結構 </tag>
             
         </tags>
       
@@ -1355,13 +1382,13 @@
             
             <tag> C++ </tag>
             
-            <tag> link list </tag>
-            
-            <tag> ICD </tag>
-            
             <tag> 1091 </tag>
             
             <tag> 資料結構 </tag>
+            
+            <tag> link list </tag>
+            
+            <tag> ICD </tag>
             
         </tags>
       
