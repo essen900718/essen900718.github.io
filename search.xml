@@ -42,11 +42,11 @@
     
     
     <entry>
-      <title>Leetcode - 27. Remove Element</title>
-      <link href="/2022/02/23/leetcode/27/"/>
-      <url>/2022/02/23/leetcode/27/</url>
+      <title>Leetcode - 28. Implement strStr()</title>
+      <link href="/2022/02/23/leetcode/28/"/>
+      <url>/2022/02/23/leetcode/28/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/remove-element/">Leetcode - 27. Remove Element</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接跑迴圈若是和val相等則直接刪除～</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt; <span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                <span class="keyword">del</span> nums[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/implement-strstr/">Leetcode - 28. Implement strStr()</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接使用find function將在字串中尋找哈哈</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span>(<span class="params">self, haystack: <span class="built_in">str</span>, needle: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">return</span> haystack.find(needle)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -80,11 +80,11 @@
     
     
     <entry>
-      <title>Leetcode - 28. Implement strStr()</title>
-      <link href="/2022/02/23/leetcode/28/"/>
-      <url>/2022/02/23/leetcode/28/</url>
+      <title>Leetcode - 27. Remove Element</title>
+      <link href="/2022/02/23/leetcode/27/"/>
+      <url>/2022/02/23/leetcode/27/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/implement-strstr/">Leetcode - 28. Implement strStr()</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接使用find function將在字串中尋找哈哈</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">strStr</span>(<span class="params">self, haystack: <span class="built_in">str</span>, needle: <span class="built_in">str</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        <span class="keyword">return</span> haystack.find(needle)</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/remove-element/">Leetcode - 27. Remove Element</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接跑迴圈若是和val相等則直接刪除～</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span></span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt; <span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                <span class="keyword">del</span> nums[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -104,31 +104,6 @@
       <url>/2022/02/23/ob/anchor/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><a class="btn-beautify button--animated block right purple larger" href="https://essen900718.github.io/posts/1267579224/"   title="OB前言筆記整理"><i class="far fa-hand-point-right fa-fw"></i><span>OB前言筆記整理</span></a><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容原文於文末參考</p></div><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>RPN是一個要提出proposals的小model，而這個小model需要我們先訂出不同尺度、比例的proposal的邊界匡的雛形。而這些雛形就叫做anchor。<br><img src="/img/article/ob/25.png" alt="ob"><br>anchor-based和anchor-free的最大差異就在有沒有利用anchor提取候選目標框。</p><h2 id="Anchor-based"><a href="#Anchor-based" class="headerlink" title="Anchor-based"></a>Anchor-based</h2><p>anchor就是預先定義的方框，通常是一次使用k個。透過網路對每個點預測k個方框的正反結果與修正向量，更白話點就是這個anchor(1) 是不是接近ground truth的bounding box、(2) 與ground truth的bounding box之間的差異（通常是平移+縮放）。</p><p>使用anchor上有三個明顯優勢：</p><ol><li>透過 不同尺度的anchor，可以減少面對物件scale和aspect ratio變化範圍大的問題。</li><li>透過控制anchor數量，可以降低<a href="https://en.wikipedia.org/wiki/Pyramid_(image_processing)">image pyramid</a>層數並依情況調整運算量。</li><li>可以透過調整anchor的尺度與密度，適應不同類型的任務。</li></ol><p>雖然挾帶著如此多的優勢，anchor-based的劣勢其實也是很顯著的，最大的問題就是：</p><ol><li>設計anchor的hyper parameter不易調整</li><li>訓練階段計算anchor的IOU（ Intersection Over Union）需要消耗大量的時間與memory。甚至從調適角度出發，先前提到的優點</li><li>感覺也不再是優點了。</li></ol><h2 id="Anchor-free"><a href="#Anchor-free" class="headerlink" title="Anchor-free"></a>Anchor-free</h2><p>Anchor Free的第一個問題就是面對不同尺度的物件辨識困難，這點在過去多半是會透過導入多尺度的image pyramid改善。但越多層的image pyramid等同造成訓練與部屬時都需額外且大量的計算量。2016年FPN（Feature Pyramid Networks）橫空出世，讓多尺度的問題有了更精簡且更加類神經感的解決方法。<br><img src="/img/article/ob/26.png" alt="ob"><br>Anchor Free的第二個問題是在訓練時過多的負樣本數會導致網路訓練變得困難，這部分也是以往anchor base方法可以透過計算IoU以平衡樣本數的優勢。2017年一行簡單的數學式 Focal Loss（RetinaNet）讓樣本數不均的one-stage展現快速且不輸two-stage的成果。這部分的想法也在後來被anchor-free的方法陸續採用，也一定程度地解決的anchor-free樣本數不均的問題。</p><p>多尺度與樣本數問題是anchor-free方法需要面對的困境，而FPN與focal loss都只是其中一種最廣為推薦的解決方法，並不是唯一，在未來也可能不再是最適用。</p><h2 id="Free-v-s-Based"><a href="#Free-v-s-Based" class="headerlink" title="Free v.s. Based"></a>Free v.s. Based</h2><ol><li>Anchor可以依照任務預先設定，大幅舒緩尺度與比例問題。這部分FPN幫助了anchor free方法。</li><li>Anchor可以藉由計算IoU，舒緩背景導致的正負樣本數不均問題。這部分focal loss幫助了free方法。</li></ol><p>anchor-based的代表是fasterRCNN、SSD、YoloV2/V3等<br>anchor-free的代表是CornerNet、ExtremeNet、CenterNet、FCOS等</p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li><a href="https://ivan-eng-murmur.medium.com/object-detection-s3-faster-rcnn-%E7%B0%A1%E4%BB%8B-5f37b13ccdd2">[物件偵測] S3: Faster R-CNN 簡介</a></li><li><a href="%5Bhttps://medium.com/%E8%BB%9F%E9%AB%94%E4%B9%8B%E5%BF%83/cv-object-detection-1-anchor-free%E5%A4%A7%E7%88%86%E7%99%BC%E7%9A%842019%E5%B9%B4-e3b4271cdf1a%5D(https://medium.com/%E8%BB%9F%E9%AB%94%E4%B9%8B%E5%BF%83/cv-object-detection-1-anchor-free%E5%A4%A7%E7%88%86%E7%99%BC%E7%9A%842019%E5%B9%B4-e3b4271cdf1a)">Object Detection 錨點之爭： Anchor Free大爆發的2019年</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> Note </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> object detection </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Object detection 筆記文章整理</title>
-      <link href="/2022/02/23/ob/objectdetection/"/>
-      <url>/2022/02/23/ob/objectdetection/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容原文於文末參考</p></div><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>目前的物件偵測 Object Detection 演算法主要分為兩部分: Two-stage vs One-stage、Anchor-based vs Anchor-free</p><p><img src="/img/article/ob/1.png" alt="ob"><br><a href="https://github.com/hoya012/deep_learning_object_detection">figure source</a></p><h2 id="Two-stage"><a href="#Two-stage" class="headerlink" title="Two-stage"></a>Two-stage</h2><p>在電腦視覺物件偵測中，一般作法都是先用特殊方法(比如Selective Search)先選出物件，然後針對選出的物件(Region Proposals)再進行物件辨識 (選出物件的過程稱為Region Proposal)。</p><p>但因為選出的物件大小可能不一樣，所以物件辨識有可能只有分類，也可能包含特徵擷取加分類。<br>這種需要先找出Region Proposal然後再做辨識的做法通常就稱為two stage learning。<br><img src="/img/article/ob/27.png" alt="ob"><br><a href="https://github.com/bourdakos1/Custom-Object-Detection">Figure source</a></p><p>這類two stage的方法通常有一個問題是如果選出來的物件太多，假設一張圖選出一千個物件，後面的辨識就用重複做一千次(如下圖)，假設辨識的部分用了一個很複雜的辨識系統，比如一個物件辨識要0.1秒，那一千個物件就要100秒了，除非你用一個很強的GPU平行運算，那還可能減低運算時間，但如果是手機這類型的算法幾乎沒辦法做到即時運算，因此才有one stage的方法。</p><p>Two stage 物件偵測的方法比較有名的方法為 Region-based convolutional neural network:</p><ol><li>最早的 R-CNN</li><li>改良版 fast R-CNN</li><li>進化版 faster R-CNN</li></ol><h2 id="One-stage"><a href="#One-stage" class="headerlink" title="One-stage"></a>One-stage</h2><p>One-stage Learning從名稱就很主觀，物件位置偵測和物件辨識一步到位，也就是一個神經網路能同時偵測物件位置也可以辨識物件，如同Google在2015年12月提出Single Shot Detector (SSD)，Google在文章摘要第一句話就寫「We present a method for detecting objects in images using a single deep neural network.」，一個深度神經網路就可以做完所有的物件偵測。<br><img src="/img/article/ob/28.png" alt="ob"><br>這種方式通常速度很快，但整體辨識精度可能沒有two stage的方法來的好，但整體辨識率仍在可接受範圍內，因此One stage的方法是目前比較多人研發用在行動裝置上的方法。</p><p>One stage 物件偵測的方法比較有名的方法為:</p><ol><li>YOLO (You only look once)系列: YOLOv1, YOLOv2, YOLOv3, Tiny YOLO</li><li>Single Shot Detector (SSD)</li></ol><h2 id="Two-stage-vs-One-stage"><a href="#Two-stage-vs-One-stage" class="headerlink" title="Two-stage vs One-stage"></a>Two-stage vs One-stage</h2><p>早期演算法以 Two-stage 為大宗，但因為物件位置檢測與分類分開進行，造成速度上有一定的限制，代表演算法有 RCNN、 Fast-RCNN和 Faster-RCNN</p><a class="btn-beautify button--animated purple larger" href="https://www.nightynight.info/2022/02/23/ob/rcnn/"   title="RCNN相關文章筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>RCNN相關文章筆記指路</span></a><p>為了改善剛剛說的 Two-stage 檢測速度問題，而有了 One-stage 演算法。作法是將物件位置檢測與分類同時進行，代表演算法有 YOLO、SSD、RetinaNet、EfficientDet</p><a class="btn-beautify button--animated purple larger" href="https://www.nightynight.info/2022/02/23/ob/yolo/"   title="YOLO相關文章筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>YOLO相關文章筆記指路</span></a><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li><a href="https://medium.com/ching-i/%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC-object-detection-%E6%A6%82%E8%BF%B0-d4f71cafcd77">物件偵測 Object Detection 概述</a></li><li><a href="https://chih-sheng-huang821.medium.com/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-%E4%BB%80%E9%BA%BC%E6%98%AFone-stage-%E4%BB%80%E9%BA%BC%E6%98%AFtwo-stage-%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC-fc3ce505390f">深度學習-什麼是one stage，什麼是two stage 物件偵測</a></li></ol>]]></content>
       
       
       <categories>
@@ -220,6 +195,31 @@
             <tag> object detection </tag>
             
             <tag> yolo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Object detection 筆記文章整理</title>
+      <link href="/2022/02/23/ob/objectdetection/"/>
+      <url>/2022/02/23/ob/objectdetection/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容原文於文末參考</p></div><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>目前的物件偵測 Object Detection 演算法主要分為兩部分: Two-stage vs One-stage、Anchor-based vs Anchor-free</p><p><img src="/img/article/ob/1.png" alt="ob"><br><a href="https://github.com/hoya012/deep_learning_object_detection">figure source</a></p><h2 id="Two-stage"><a href="#Two-stage" class="headerlink" title="Two-stage"></a>Two-stage</h2><p>在電腦視覺物件偵測中，一般作法都是先用特殊方法(比如Selective Search)先選出物件，然後針對選出的物件(Region Proposals)再進行物件辨識 (選出物件的過程稱為Region Proposal)。</p><p>但因為選出的物件大小可能不一樣，所以物件辨識有可能只有分類，也可能包含特徵擷取加分類。<br>這種需要先找出Region Proposal然後再做辨識的做法通常就稱為two stage learning。<br><img src="/img/article/ob/27.png" alt="ob"><br><a href="https://github.com/bourdakos1/Custom-Object-Detection">Figure source</a></p><p>這類two stage的方法通常有一個問題是如果選出來的物件太多，假設一張圖選出一千個物件，後面的辨識就用重複做一千次(如下圖)，假設辨識的部分用了一個很複雜的辨識系統，比如一個物件辨識要0.1秒，那一千個物件就要100秒了，除非你用一個很強的GPU平行運算，那還可能減低運算時間，但如果是手機這類型的算法幾乎沒辦法做到即時運算，因此才有one stage的方法。</p><p>Two stage 物件偵測的方法比較有名的方法為 Region-based convolutional neural network:</p><ol><li>最早的 R-CNN</li><li>改良版 fast R-CNN</li><li>進化版 faster R-CNN</li></ol><h2 id="One-stage"><a href="#One-stage" class="headerlink" title="One-stage"></a>One-stage</h2><p>One-stage Learning從名稱就很主觀，物件位置偵測和物件辨識一步到位，也就是一個神經網路能同時偵測物件位置也可以辨識物件，如同Google在2015年12月提出Single Shot Detector (SSD)，Google在文章摘要第一句話就寫「We present a method for detecting objects in images using a single deep neural network.」，一個深度神經網路就可以做完所有的物件偵測。<br><img src="/img/article/ob/28.png" alt="ob"><br>這種方式通常速度很快，但整體辨識精度可能沒有two stage的方法來的好，但整體辨識率仍在可接受範圍內，因此One stage的方法是目前比較多人研發用在行動裝置上的方法。</p><p>One stage 物件偵測的方法比較有名的方法為:</p><ol><li>YOLO (You only look once)系列: YOLOv1, YOLOv2, YOLOv3, Tiny YOLO</li><li>Single Shot Detector (SSD)</li></ol><h2 id="Two-stage-vs-One-stage"><a href="#Two-stage-vs-One-stage" class="headerlink" title="Two-stage vs One-stage"></a>Two-stage vs One-stage</h2><p>早期演算法以 Two-stage 為大宗，但因為物件位置檢測與分類分開進行，造成速度上有一定的限制，代表演算法有 RCNN、 Fast-RCNN和 Faster-RCNN</p><a class="btn-beautify button--animated purple larger" href="https://www.nightynight.info/2022/02/23/ob/rcnn/"   title="RCNN相關文章筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>RCNN相關文章筆記指路</span></a><p>為了改善剛剛說的 Two-stage 檢測速度問題，而有了 One-stage 演算法。作法是將物件位置檢測與分類同時進行，代表演算法有 YOLO、SSD、RetinaNet、EfficientDet</p><a class="btn-beautify button--animated purple larger" href="https://www.nightynight.info/2022/02/23/ob/yolo/"   title="YOLO相關文章筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>YOLO相關文章筆記指路</span></a><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li><a href="https://medium.com/ching-i/%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC-object-detection-%E6%A6%82%E8%BF%B0-d4f71cafcd77">物件偵測 Object Detection 概述</a></li><li><a href="https://chih-sheng-huang821.medium.com/%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92-%E4%BB%80%E9%BA%BC%E6%98%AFone-stage-%E4%BB%80%E9%BA%BC%E6%98%AFtwo-stage-%E7%89%A9%E4%BB%B6%E5%81%B5%E6%B8%AC-fc3ce505390f">深度學習-什麼是one stage，什麼是two stage 物件偵測</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Note </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> object detection </tag>
             
         </tags>
       
@@ -453,9 +453,9 @@
       
         <tags>
             
-            <tag> Google map API </tag>
-            
             <tag> contest </tag>
+            
+            <tag> Google map API </tag>
             
         </tags>
       
@@ -734,9 +734,9 @@
       
         <tags>
             
-            <tag> contest </tag>
-            
             <tag> NCPU </tag>
+            
+            <tag> contest </tag>
             
         </tags>
       
@@ -749,7 +749,7 @@
       <link href="/2021/08/17/share/hexofatal/"/>
       <url>/2021/08/17/share/hexofatal/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">&#x79;&#111;&#x75;&#x72;&#x5f;&#101;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;Users&#x2F;isadora&#x2F;Desktop&#x2F;Blog&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal&#x2F;child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~&#x2F;.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#x79;&#111;&#x75;&#x72;&#95;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;">&#x79;&#111;&#x75;&#x72;&#95;&#x65;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#99;&#x6f;&#109;</a></strong>是要打自己的email喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public&#x2F;private rsa key pair.</span><br><span class="line">Enter file in which to save the key (&#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.</span><br><span class="line">Your public key has been saved in &#x2F;home&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#39;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username&#x2F;username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
       
       
       <categories>
@@ -847,31 +847,6 @@
     
     
     <entry>
-      <title>python爬蟲-抓取B站影片彈幕存成文本</title>
-      <link href="/2021/08/13/python-bilibili/"/>
-      <url>/2021/08/13/python-bilibili/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://www.youtube.com/watch?v=ryS8YvRNSbk">完整教學</a></p><h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br></pre></td></tr></table></figure><h2 id="愛嗶哩網站"><a href="#愛嗶哩網站" class="headerlink" title="愛嗶哩網站"></a>愛嗶哩網站</h2><p>在bilibili隨便一個影片網址的bilibili前加上i可以查到影片的完整資訊呦！<br>像是這樣：<br>原影片：<br><a href="https://www.bilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460">https://www.bilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460</a><br>加上一個i:<br><a href="https://www.ibilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460">https://www.ibilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460</a></p><p>在愛嗶哩的頁面我們可以看到下方有彈幕的網址 接著我們就可以透過這個頁面抓取囉！！</p><h2 id="抓取接口"><a href="#抓取接口" class="headerlink" title="抓取接口"></a>抓取接口</h2><p>開啟開發人員工具後，進到微博個人主頁後可以在網路的部分(資料類型請選取XHR)抓到getIndex開頭的接口<br>(小提示：有時候會抓不到但是如果把網頁換成手機版就可以抓到了～ 還有嘗試過後發現getIndex和getInfo好像都是可以的！)</p><p>在抓到後可以在標頭內抓到要求URL</p><p>取得URL後就可以開始啦！</p><h2 id="完整程式碼"><a href="#完整程式碼" class="headerlink" title="完整程式碼"></a>完整程式碼</h2><p>這邊過濾彈幕的時候使用了一個小技巧 即<code>.*?</code> 俗話說：遇事不決點星問 就是這個意思了吧～！<br>其實我也很好奇到底怎麼解決的 改天有空就來研究一下啦！</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://api.bilibili.com/x/v1/dm/list.so?oid=367761750&#x27;</span></span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Mobile Safari/537.36 Edg/92.0.902.62&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(url=url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment">#encoding chinese </span></span><br><span class="line">response.encoding = response.apparent_encoding</span><br><span class="line"><span class="comment">#it will keep the word in () into response.text</span></span><br><span class="line">html_data = re.findall(<span class="string">&#x27;&lt;d p=&quot;.*?&quot;&gt;(.*?)&lt;/d&gt;&#x27;</span>, response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment">#turn the list(response.text&#x27;s data type) into str so that we can write into txt</span></span><br><span class="line">content_str = <span class="string">&#x27;\n&#x27;</span>.join(html_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;彈幕.txt&#x27;</span>, mode = <span class="string">&#x27;w&#x27;</span>, encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(content_str)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(html_data)    </span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> web crawler </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小小筆記 - 這樣Ｏ那樣Ｘ 馬上學會好設計(part2)</title>
       <link href="/2021/08/13/%E9%80%99%E6%A8%A3o%E9%82%A3%E6%A8%A3x2/"/>
       <url>/2021/08/13/%E9%80%99%E6%A8%A3o%E9%82%A3%E6%A8%A3x2/</url>
@@ -889,6 +864,31 @@
         <tags>
             
             <tag> 這樣Ｏ那樣Ｘ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>python爬蟲-抓取B站影片彈幕存成文本</title>
+      <link href="/2021/08/13/python-bilibili/"/>
+      <url>/2021/08/13/python-bilibili/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><a href="https://www.youtube.com/watch?v=ryS8YvRNSbk">完整教學</a></p><h2 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br></pre></td></tr></table></figure><h2 id="愛嗶哩網站"><a href="#愛嗶哩網站" class="headerlink" title="愛嗶哩網站"></a>愛嗶哩網站</h2><p>在bilibili隨便一個影片網址的bilibili前加上i可以查到影片的完整資訊呦！<br>像是這樣：<br>原影片：<br><a href="https://www.bilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460">https://www.bilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460</a><br>加上一個i:<br><a href="https://www.ibilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460">https://www.ibilibili.com/video/BV13o4y1S7QD?from=search&amp;seid=9846723565481599460</a></p><p>在愛嗶哩的頁面我們可以看到下方有彈幕的網址 接著我們就可以透過這個頁面抓取囉！！</p><h2 id="抓取接口"><a href="#抓取接口" class="headerlink" title="抓取接口"></a>抓取接口</h2><p>開啟開發人員工具後，進到微博個人主頁後可以在網路的部分(資料類型請選取XHR)抓到getIndex開頭的接口<br>(小提示：有時候會抓不到但是如果把網頁換成手機版就可以抓到了～ 還有嘗試過後發現getIndex和getInfo好像都是可以的！)</p><p>在抓到後可以在標頭內抓到要求URL</p><p>取得URL後就可以開始啦！</p><h2 id="完整程式碼"><a href="#完整程式碼" class="headerlink" title="完整程式碼"></a>完整程式碼</h2><p>這邊過濾彈幕的時候使用了一個小技巧 即<code>.*?</code> 俗話說：遇事不決點星問 就是這個意思了吧～！<br>其實我也很好奇到底怎麼解決的 改天有空就來研究一下啦！</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">url = <span class="string">&#x27;https://api.bilibili.com/x/v1/dm/list.so?oid=367761750&#x27;</span></span><br><span class="line"></span><br><span class="line">headers = &#123;</span><br><span class="line">    <span class="string">&#x27;user-agent&#x27;</span>: <span class="string">&#x27;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Mobile Safari/537.36 Edg/92.0.902.62&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">response = requests.get(url=url, headers=headers)</span><br><span class="line"></span><br><span class="line"><span class="comment">#encoding chinese </span></span><br><span class="line">response.encoding = response.apparent_encoding</span><br><span class="line"><span class="comment">#it will keep the word in () into response.text</span></span><br><span class="line">html_data = re.findall(<span class="string">&#x27;&lt;d p=&quot;.*?&quot;&gt;(.*?)&lt;/d&gt;&#x27;</span>, response.text)</span><br><span class="line"></span><br><span class="line"><span class="comment">#turn the list(response.text&#x27;s data type) into str so that we can write into txt</span></span><br><span class="line">content_str = <span class="string">&#x27;\n&#x27;</span>.join(html_data)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;彈幕.txt&#x27;</span>, mode = <span class="string">&#x27;w&#x27;</span>, encoding = <span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(content_str)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(html_data)    </span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web crawler </tag>
             
         </tags>
       
@@ -1017,9 +1017,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -1044,9 +1044,9 @@
       
         <tags>
             
-            <tag> hexo </tag>
-            
             <tag> markdown </tag>
+            
+            <tag> hexo </tag>
             
         </tags>
       
@@ -1394,6 +1394,8 @@
       
         <tags>
             
+            <tag> contest </tag>
+            
             <tag> APP </tag>
             
             <tag> Ionic </tag>
@@ -1405,8 +1407,6 @@
             <tag> Google map API </tag>
             
             <tag> YZU </tag>
-            
-            <tag> contest </tag>
             
             <tag> typescript </tag>
             
