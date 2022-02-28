@@ -679,7 +679,7 @@
 
   <url>
     <loc>https://www.nightynight.info/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -687,413 +687,413 @@
   
   <url>
     <loc>https://www.nightynight.info/tags/ascii/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/OpenCV/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/ML/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/CNN/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.nightynight.info/tags/javascript/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <loc>https://www.nightynight.info/tags/OpenCV/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/ML/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/pycharts/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/web-crawler/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/javascript/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/%E9%80%99%E6%A8%A3O%E9%82%A3%E6%A8%A3X/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/git/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/markdown/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/hexo/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/python/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/object-detection/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/rcnn/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/yolo/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/APP/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/Ionic/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/PHP/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/Angular/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/Google-map-API/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/YZU/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/contest/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/typescript/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/GICS/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/Information-Security/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/MOST/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/chrome-extension/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/NCPU/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/paper/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/face-alignment/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/AI/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/Three-Laws-of-Robotics/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/netease/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/github/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/variety-show/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/slide/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/template/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/drama/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/HTML/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/HTML5/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/Bootstrap/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/jQuery/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/css/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/css3/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/project/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/SwiftUI/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/IOS/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/veriog/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/fpga/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/de0/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/tags/C/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/mips/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/C/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/java/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/json/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/HTML/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/HTML5/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/Bootstrap/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/jQuery/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/css/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/css3/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/project/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/SwiftUI/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/IOS/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/veriog/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/fpga/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/de0/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/git/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/markdown/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/hexo/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/paper/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/tree/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/relative-calculator/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/graph/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/1091/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/tags/%E8%B3%87%E6%96%99%E7%B5%90%E6%A7%8B/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/face-alignment/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/object-detection/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/rcnn/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/drama/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/yolo/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/AI/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/Three-Laws-of-Robotics/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/github/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/variety-show/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/slide/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/template/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/python/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/tags/netease/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1102,70 +1102,70 @@
   
   <url>
     <loc>https://www.nightynight.info/categories/Python/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/categories/Note/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/categories/Share/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/categories/Contest/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/categories/Leetcode/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.nightynight.info/categories/SwiftUI/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/categories/Verilog/</loc>
-    <lastmod>2022-02-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.nightynight.info/categories/C/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <loc>https://www.nightynight.info/categories/Contest/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/categories/MIPS/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.nightynight.info/categories/Java/</loc>
-    <lastmod>2022-02-24</lastmod>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/categories/C/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/categories/SwiftUI/</loc>
+    <lastmod>2022-02-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.nightynight.info/categories/Verilog/</loc>
+    <lastmod>2022-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
