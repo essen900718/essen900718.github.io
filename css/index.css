@@ -2335,7 +2335,7 @@ blockquote footer cite:before {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  height: 20em;
+  height: 8em;
   border-radius: 12px 8px 8px 12px;
   background: var(--card-bg);
   -webkit-box-shadow: var(--card-box-shadow);
@@ -2366,13 +2366,7 @@ blockquote footer cite:before {
   border-radius: 8px 0 0 8px;
 }
 #recent-posts > .recent-post-item .right_radius {
-  -webkit-box-ordinal-group: 2;
-  -moz-box-ordinal-group: 2;
-  -o-box-ordinal-group: 2;
-  -ms-flex-order: 2;
-  -webkit-order: 2;
-  order: 2;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px 0 0 8px;
 }
 #recent-posts > .recent-post-item.ads-wrap {
   display: block !important;
@@ -2439,7 +2433,7 @@ blockquote footer cite:before {
   margin: 0 0.2rem 0 0;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .article-meta-label {
-  padding-right: 0.2rem;
+  display: none;
 }
 #recent-posts > .recent-post-item >.recent-post-info > .article-meta-wrap .article-meta__separator {
   margin: 0 0.3rem;
@@ -4537,12 +4531,6 @@ _:future,
 }
 #post .ads-wrap {
   margin: 2rem 0;
-}
-#recent-posts>.post-card-large {
-  height: 20em !important;
-}
-#recent-posts > .post-card-large >.recent-post-info > .content {
-  -webkit-line-clamp: 5 !important;
 }
 .relatedPosts {
   margin-top: 2rem;
