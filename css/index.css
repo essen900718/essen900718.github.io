@@ -4384,6 +4384,26 @@ _:future,
     display: none;
   }
 }
+@media screen and (min-width: 776px) {
+  #rightside button {
+    margin-right: 8px;
+  }
+  #rightside > div > button,
+  #rightside > div > a {
+    margin-bottom: 5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 22.5px;
+    font-size: 22px;
+  }
+  #rightside #rightside-config-hide {
+    -webkit-transform: translate(55px, 0);
+    -moz-transform: translate(55px, 0);
+    -o-transform: translate(55px, 0);
+    -ms-transform: translate(55px, 0);
+    transform: translate(55px, 0);
+  }
+}
 #sidebar #menu-mask {
   position: fixed;
   z-index: 102;
