@@ -629,31 +629,6 @@
     
     
     <entry>
-      <title>R²決定係數 文章筆記整理</title>
-      <link href="/2022/04/06/ml/coe/"/>
-      <url>/2022/04/06/ml/coe/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1102 機器學習</p><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便</p></div><p>還沒更新完啦<br>先推薦你們去看李柏堅老師的</p><a class="btn-beautify button--animated block right purple larger" href="https://www.youtube.com/watch?v=mAJRtq6sThk&t=5s"   title="判定係數"><i class="far fa-hand-point-right fa-fw"></i><span>判定係數</span></a><ul><li>R²越接近1越好，教科書上寫0.9但實際上很難達到，視情況而定，像是0.64雖然不高，但還堪用</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> MachineLearning </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> ML </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Generative Adversarial Network 筆記文章整理</title>
       <link href="/2022/04/06/ml/gan/"/>
       <url>/2022/04/06/ml/gan/</url>
@@ -709,6 +684,31 @@
       <url>/2022/04/06/ml/linear/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1102 機器學習</p><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容為上課之內容整理</p></div><hr><p>監督式學習最常處理的兩個問題：分類、迴歸<br>當預測的數值為連續的我們稱為迴歸，若是離散的，我們稱為分類<br>簡單來說，<br>迴歸就是找一條線，而該線盡可能的通過所有的資料點<br>分類就是把資料分到指定的幾個分類中</p><p>本篇主要是在講迴歸，若要看分類的在另外一則文章喔！</p><a class="btn-beautify button--animated block right purple larger" href="https://essen900718.github.io/2022/04/08/ml/classification/"   title="classification 文章筆記整理"><i class="far fa-hand-point-right fa-fw"></i><span>classification 文章筆記整理</span></a><h2 id="迴歸分析"><a href="#迴歸分析" class="headerlink" title="迴歸分析"></a>迴歸分析</h2><ul><li>迴歸分析是預測數值的分析</li><li>在迴歸問題中，要從給予的資料來假設關係式(y=ax+b)，逐步求取最適合的係數</li><li>是監督是學習方式的一種：在學習時逐一給予正確答案，作為計算關聯的基礎</li><li>若是輸入為一個變數則為「簡單迴歸分析」(y=ax+b)，若是兩個以上則為「多元迴歸分析」(y=a₀x₀+…+aᵢxᵢ+b)</li></ul><p>目的是在於可以找到一條線能讓各個資料點到達該線的距離總和最小</p><p><img src="/img/article/gan/7.png" alt="gan"></p><h2 id="簡單線性迴歸"><a href="#簡單線性迴歸" class="headerlink" title="簡單線性迴歸"></a>簡單線性迴歸</h2><p>輸入與輸出之間成立線性關係(y = ax + b)<br>我們可以以scikit-learn引入linear_model進行簡單係性迴歸分析</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</span><br><span class="line">reg = linear_model.LinerRegression() <span class="comment">#生成線性回歸模型</span></span><br><span class="line"></span><br><span class="line">reg.fit(X, Y) <span class="comment">#計算預測模型（即算出迴歸係數a 與 截距b)</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(reg.coef_)</span><br><span class="line"><span class="built_in">print</span>(reg.intercept_)</span><br><span class="line"><span class="built_in">print</span>(reg.score(X, Y)) <span class="comment">#決定係數</span></span><br></pre></td></tr></table></figure><ul><li>X, Y為解釋變數與目標變數資料，可以為多維</li><li>使用<strong>最小平方</strong>來計算迴歸係數與截距</li></ul><blockquote><p>決定係數稱為貢獻度，以<strong>R²</strong>來表示，越接近1代表此模型越能代表資料，詳細整理前往<a href="https://essen900718.github.io/2022/04/06/ml/coe/">這裡</a><br>  <img src="/img/article/gan/8.png" alt="gan"></p></blockquote><h2 id="多元線性回歸"><a href="#多元線性回歸" class="headerlink" title="多元線性回歸"></a>多元線性回歸</h2><p>多元線性回歸的解釋變數有多個，藉由多元線性回歸我們可以計算出各個解釋變數之係數的推論預測值</p><p>以下以預測汽車價格的模型來舉例<br>資料如下圖(存於auto變數中)：<br><img src="/img/article/gan/9.png" alt="gan"></p><h3 id="資料前處理範例"><a href="#資料前處理範例" class="headerlink" title="資料前處理範例"></a>資料前處理範例</h3><h4 id="觀察資料"><a href="#觀察資料" class="headerlink" title="觀察資料"></a>觀察資料</h4><p><strong>先觀察資料是什麼樣的？</strong> -&gt; 為205列26行的資料</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;汽車資料的形式:&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(auto.shape)) <span class="comment">#會印出(205, 26) 是汽車資料的形式</span></span><br></pre></td></tr></table></figure><p>在這個範例裡我們的目標就是要從<code>price</code>這個欄位以外的欄位去預測<code>price</code>這個欄位<br>因為從全部的欄位來解釋<code>price</code>會太複雜，因此以下的示範就以<code>horsepower</code>、<code>width</code>、<code>height</code>這三個欄位來預測模型</p><blockquote><p>收到資料第一步要確認資料的<strong>正確性</strong>，再來確認資料的<strong>相關性</strong></p></blockquote><h4 id="確認資料正確性"><a href="#確認資料正確性" class="headerlink" title="確認資料正確性"></a>確認資料正確性</h4><p>資料有時會包含不適當的東西，所以要進行確認，去除不必要的資料<br>用<code>head()</code>函式可以發現資料有部分欄位為”?”</p><blockquote><p>對於這些不正常的資料，我們可以：<br>    - 去除那一列<br>    - 補0<br>    - 補前一列的值</p></blockquote><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto = auto[[<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;horsepower&#x27;</span>, <span class="string">&#x27;width&#x27;</span>, <span class="string">&#x27;height&#x27;</span>]]</span><br><span class="line">auto.isin([<span class="string">&#x27;?&#x27;</span>]).<span class="built_in">sum</span>() <span class="comment">#計算個行列裡有多少?</span></span><br></pre></td></tr></table></figure><p>可能顯示：<br>price        4<br>horsepower   2<br>width        0<br>height       0<br>dtype:  int64</p><p><strong>法一 去除那一列</strong></p><p>將有？的欄位轉為遺漏值(NaN)後去除那一列</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">auto = auto.replace(<span class="string">&#x27;?&#x27;</span>, np.nan).dropna()</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;汽車資料的形式：&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(auto.shape)) <span class="comment">#刪除後變成199列4行</span></span><br></pre></td></tr></table></figure><h4 id="確認資料型別"><a href="#確認資料型別" class="headerlink" title="確認資料型別"></a>確認資料型別</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;資料型別的確認(型別轉換前)\n&#123;&#125;\n&#x27;</span>.<span class="built_in">format</span>(auto.dtypes))</span><br></pre></td></tr></table></figure><p>可能顯示：<br>資料型別的確認(型別轉換前)<br>price       object<br>horsepower  object<br>width      float64<br>height     float64<br>dtype:  object</p><p>這樣就可以確認price和horsepower並非數值型別</p><p>我們可以使用<code>to_numeric</code>函式來轉換型別</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">auto = auto.assign(price=pd.to_numeric(auto.price))</span><br><span class="line">auto = auto.assign(horsepower=pd.to_numeric(auto.horsepower))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;資料型別的確認(型別轉換後)\n&#123;&#125;\n&#x27;</span>.<span class="built_in">format</span>(auto.dtypes))</span><br></pre></td></tr></table></figure><p>可能顯示：<br>資料型別的確認(型別轉換後)<br>price        int64<br>horsepower   int64<br>width      float64<br>height     float64<br>dtype:  object</p><h4 id="確認資料相關性"><a href="#確認資料相關性" class="headerlink" title="確認資料相關性"></a>確認資料相關性</h4><p>接下來我們要確認資料之間的關聯性<br>我們可以使用corr函式</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auto.corr()</span><br></pre></td></tr></table></figure><p>可能顯示：</p><table><thead><tr><th align="center"></th><th align="center">price</th><th align="center">horsepower</th><th align="center">width</th><th align="center">height</th></tr></thead><tbody><tr><td align="center">price</td><td align="center">1.000</td><td align="center">0.810</td><td align="center">0.753</td><td align="center">0.134</td></tr><tr><td align="center">horsepower</td><td align="center">0.810</td><td align="center">1.000</td><td align="center">0.615</td><td align="center">-0.087</td></tr><tr><td align="center">width</td><td align="center">0.753</td><td align="center">0.615</td><td align="center">1.000</td><td align="center">0.309</td></tr><tr><td align="center">height</td><td align="center">0.134</td><td align="center">-0.087</td><td align="center">0.309</td><td align="center">1.000</td></tr></tbody></table><p>目標變為price，觀察其他三個變數<br>發現horsepower和width的關係稍微偏高</p><p>相關性較高的變數同時作為多元線性回歸的解釋變數可能會發生<strong>多元共線性(mutli-collinearity)</strong></p><blockquote><p>多元共線性(mutli-collinearity)<br>  多元共線性是由於變數間的高相關性，迴歸係數的變異數大，失去了係數的顯著性。</p></blockquote><p>這樣的現象應該避免，所以建構多元線性回歸的模型時，通常只挑出能<strong>代表高相關性變數群的變數來用於模型</strong></p><p>！！不過這裡只是實驗示範，因此後面的實作接還是以三個變數一起建構模型！！</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 指定目標變數與解釋變數</span></span><br><span class="line">X = auto.drop(<span class="string">&#x27;price&#x27;</span>, axis=<span class="number">1</span>)</span><br><span class="line">y = auto[<span class="string">&#x27;price&#x27;</span>] </span><br><span class="line"></span><br><span class="line">X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=<span class="number">0.5</span>, random_state=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(X_train, Y_train)</span><br><span class="line"></span><br><span class="line"><span class="comment">#顯示決定係數</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;決定係數(train):&#123;:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(model.score(X_train, Y_train)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;決定係數(test):&#123;:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(model.score(X_test, Y_test)))</span><br><span class="line"></span><br><span class="line"><span class="comment">#顯示迴歸係數與截距</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\n迴歸係數\n&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(pd.Series(model.coef_, index=X.columns)))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;截距：&#123;:.3f&#125;&#x27;</span>.<span class="built_in">format</span>(model.intercept_))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> MachineLearning </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>R²決定係數 文章筆記整理</title>
+      <link href="/2022/04/06/ml/coe/"/>
+      <url>/2022/04/06/ml/coe/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1102 機器學習</p><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便</p></div><p>還沒更新完啦<br>先推薦你們去看李柏堅老師的</p><a class="btn-beautify button--animated block right purple larger" href="https://www.youtube.com/watch?v=mAJRtq6sThk&t=5s"   title="判定係數"><i class="far fa-hand-point-right fa-fw"></i><span>判定係數</span></a><ul><li>R²越接近1越好，教科書上寫0.9但實際上很難達到，視情況而定，像是0.64雖然不高，但還堪用</li></ul>]]></content>
       
       
       <categories>
@@ -908,35 +908,6 @@
     
     
     <entry>
-      <title>Data Preprocessing 筆記整理 - ft. Pandas, Numpy, Scipy, Matplotlib</title>
-      <link href="/2022/03/06/dp/dp/"/>
-      <url>/2022/03/06/dp/dp/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1102 機器學習</p><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容為上課之內容整理</p></div><h2 id="常用於資料分析的函式庫"><a href="#常用於資料分析的函式庫" class="headerlink" title="常用於資料分析的函式庫"></a>常用於資料分析的函式庫</h2><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><pre><code>- 進行基本陣列處理與數值運算的函式庫- 除了能做到進階且複雜的運算之外，處理速度比Python裡的一般運算快</code></pre><h3 id="Scipy"><a href="#Scipy" class="headerlink" title="Scipy"></a>Scipy</h3><pre><code>- 將Numpy的功能更近一步強化的函式庫- 能進行統計與訊號運算</code></pre><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><pre><code>- 藉由DataFrame形式來對各種資料進行加工的函式庫</code></pre><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><pre><code>- 用於將資料視覺化的函式庫</code></pre><p><img src="/img/article/dp/1.jpg" alt="dp"></p><h2 id="函式庫的匯入"><a href="#函式庫的匯入" class="headerlink" title="函式庫的匯入"></a>函式庫的匯入</h2><p><strong>法一</strong></p><p>直接import整個模組，不過若是需要使用到某個功能，則需<strong>模組.功能名稱.功能名稱…</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">numpy.random.seed(<span class="number">0</span>)  <span class="comment">##使用numpy內random的設定亂數種子功能</span></span><br></pre></td></tr></table></figure><p><strong>法二</strong></p><p>從模組內直接import某個功能，則呼叫時前面就可以省略模組名稱，若是需要常常用到的功能，使用這個方式會比較省功夫拉～</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">random.seed(<span class="number">0</span>) <span class="comment">##使用numpy內random的設定亂數種子功能</span></span><br></pre></td></tr></table></figure><h2 id="資料前處理常用資料庫"><a href="#資料前處理常用資料庫" class="headerlink" title="資料前處理常用資料庫"></a>資料前處理常用資料庫</h2><h3 id="Numpy-1"><a href="#Numpy-1" class="headerlink" title="Numpy"></a>Numpy</h3><a class="btn-beautify button--animated purple larger" href="https://essen900718.github.io/2022/03/06/dp/np/"   title="Numpy筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>Numpy筆記指路</span></a><h3 id="Pandas-1"><a href="#Pandas-1" class="headerlink" title="Pandas"></a>Pandas</h3><a class="btn-beautify button--animated purple larger" href="https://essen900718.github.io/2022/03/06/dp/pd/"   title="Pandas筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>Pandas筆記指路</span></a><h2 id="資料前處理的步驟"><a href="#資料前處理的步驟" class="headerlink" title="資料前處理的步驟"></a>資料前處理的步驟</h2><ol><li>資料清洗</li><li>資料補值</li><li>資料標註</li></ol><p>處理資料就像處理食材一樣，清洗是絕對不可以省略的步驟，而錯誤的資料縱使有再厲害的分析方法必然不能產生正確的結果。</p><h3 id="資料清洗"><a href="#資料清洗" class="headerlink" title="資料清洗"></a>資料清洗</h3><p>首先先決定好最終想要看到什麼，是想要看到「男性女性」、「男女」、還是「MF」，接者就要將詞語全數代換，最後無法分辨或是格式錯誤的資料列為null（再差至少也要是空白，而不是半形空格、全形空格、未填寫等等）</p><h3 id="資料補值"><a href="#資料補值" class="headerlink" title="資料補值"></a>資料補值</h3><p>對於異常值補值是該刪除該筆資料還是以平均填補沒有一定的定義，須由分析師或是決策者來判斷，而不同的運用手法會產生很大的偏差，可能導致錯誤的決策，所以需要謹慎處理<br>檢測出異常的方法包括繪製箱形圖、使用常態分佈分析方法等等</p><h3 id="資料標註"><a href="#資料標註" class="headerlink" title="資料標註"></a>資料標註</h3><p>資料標註工具： labelbox, labelimg</p><p>若要看整個資料前處理的範例可以到<a href="https://essen900718.github.io/2022/04/06/ml/linear/">這裡</a>的多元線性回歸章節觀看喔！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> DataPreprocessing </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> DP </tag>
-            
-            <tag> Pandas </tag>
-            
-            <tag> Numpy </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Numpy 筆記整理</title>
       <link href="/2022/03/06/dp/np/"/>
       <url>/2022/03/06/dp/np/</url>
@@ -956,6 +927,35 @@
             <tag> DP </tag>
             
             <tag> Numpy </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Data Preprocessing 筆記整理 - ft. Pandas, Numpy, Scipy, Matplotlib</title>
+      <link href="/2022/03/06/dp/dp/"/>
+      <url>/2022/03/06/dp/dp/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>1102 機器學習</p><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容為上課之內容整理</p></div><h2 id="常用於資料分析的函式庫"><a href="#常用於資料分析的函式庫" class="headerlink" title="常用於資料分析的函式庫"></a>常用於資料分析的函式庫</h2><h3 id="Numpy"><a href="#Numpy" class="headerlink" title="Numpy"></a>Numpy</h3><pre><code>- 進行基本陣列處理與數值運算的函式庫- 除了能做到進階且複雜的運算之外，處理速度比Python裡的一般運算快</code></pre><h3 id="Scipy"><a href="#Scipy" class="headerlink" title="Scipy"></a>Scipy</h3><pre><code>- 將Numpy的功能更近一步強化的函式庫- 能進行統計與訊號運算</code></pre><h3 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h3><pre><code>- 藉由DataFrame形式來對各種資料進行加工的函式庫</code></pre><h3 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h3><pre><code>- 用於將資料視覺化的函式庫</code></pre><p><img src="/img/article/dp/1.jpg" alt="dp"></p><h2 id="函式庫的匯入"><a href="#函式庫的匯入" class="headerlink" title="函式庫的匯入"></a>函式庫的匯入</h2><p><strong>法一</strong></p><p>直接import整個模組，不過若是需要使用到某個功能，則需<strong>模組.功能名稱.功能名稱…</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">numpy.random.seed(<span class="number">0</span>)  <span class="comment">##使用numpy內random的設定亂數種子功能</span></span><br></pre></td></tr></table></figure><p><strong>法二</strong></p><p>從模組內直接import某個功能，則呼叫時前面就可以省略模組名稱，若是需要常常用到的功能，使用這個方式會比較省功夫拉～</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line">random.seed(<span class="number">0</span>) <span class="comment">##使用numpy內random的設定亂數種子功能</span></span><br></pre></td></tr></table></figure><h2 id="資料前處理常用資料庫"><a href="#資料前處理常用資料庫" class="headerlink" title="資料前處理常用資料庫"></a>資料前處理常用資料庫</h2><h3 id="Numpy-1"><a href="#Numpy-1" class="headerlink" title="Numpy"></a>Numpy</h3><a class="btn-beautify button--animated purple larger" href="https://essen900718.github.io/2022/03/06/dp/np/"   title="Numpy筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>Numpy筆記指路</span></a><h3 id="Pandas-1"><a href="#Pandas-1" class="headerlink" title="Pandas"></a>Pandas</h3><a class="btn-beautify button--animated purple larger" href="https://essen900718.github.io/2022/03/06/dp/pd/"   title="Pandas筆記指路"><i class="far fa-hand-point-right fa-fw"></i><span>Pandas筆記指路</span></a><h2 id="資料前處理的步驟"><a href="#資料前處理的步驟" class="headerlink" title="資料前處理的步驟"></a>資料前處理的步驟</h2><ol><li>資料清洗</li><li>資料補值</li><li>資料標註</li></ol><p>處理資料就像處理食材一樣，清洗是絕對不可以省略的步驟，而錯誤的資料縱使有再厲害的分析方法必然不能產生正確的結果。</p><h3 id="資料清洗"><a href="#資料清洗" class="headerlink" title="資料清洗"></a>資料清洗</h3><p>首先先決定好最終想要看到什麼，是想要看到「男性女性」、「男女」、還是「MF」，接者就要將詞語全數代換，最後無法分辨或是格式錯誤的資料列為null（再差至少也要是空白，而不是半形空格、全形空格、未填寫等等）</p><h3 id="資料補值"><a href="#資料補值" class="headerlink" title="資料補值"></a>資料補值</h3><p>對於異常值補值是該刪除該筆資料還是以平均填補沒有一定的定義，須由分析師或是決策者來判斷，而不同的運用手法會產生很大的偏差，可能導致錯誤的決策，所以需要謹慎處理<br>檢測出異常的方法包括繪製箱形圖、使用常態分佈分析方法等等</p><h3 id="資料標註"><a href="#資料標註" class="headerlink" title="資料標註"></a>資料標註</h3><p>資料標註工具： labelbox, labelimg</p><p>若要看整個資料前處理的範例可以到<a href="https://essen900718.github.io/2022/04/06/ml/linear/">這裡</a>的多元線性回歸章節觀看喔！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> DataPreprocessing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DP </tag>
+            
+            <tag> Numpy </tag>
+            
+            <tag> Pandas </tag>
             
         </tags>
       
@@ -1162,6 +1162,25 @@
     
     
     <entry>
+      <title>Leetcode - 27. Remove Element</title>
+      <link href="/2022/02/23/leetcode/27/"/>
+      <url>/2022/02/23/leetcode/27/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/remove-element/">Leetcode - 27. Remove Element</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接跑迴圈若是和val相等則直接刪除～</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt; <span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                <span class="keyword">del</span> nums[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Leetcode </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Leetcode - 28. Implement strStr()</title>
       <link href="/2022/02/23/leetcode/28/"/>
       <url>/2022/02/23/leetcode/28/</url>
@@ -1186,25 +1205,6 @@
       <url>/2022/02/23/leetcode/344/</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/reverse-string/">Leetcode - 344. Reverse String</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接使用reverse function將字串顛倒哈哈</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">reverseString</span>(<span class="params">self, s: <span class="type">List</span>[<span class="built_in">str</span>]</span>) -&gt; <span class="literal">None</span>:</span><br><span class="line">        s.reverse()</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Leetcode </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Leetcode - 27. Remove Element</title>
-      <link href="/2022/02/23/leetcode/27/"/>
-      <url>/2022/02/23/leetcode/27/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note primary danger flat"><p>此篇文章為我的解題紀錄，程式碼或許並不是很完善</p></div><p><a href="https://leetcode.com/problems/remove-element/">Leetcode - 27. Remove Element</a></p><h2 id="解題思路"><a href="#解題思路" class="headerlink" title="解題思路"></a>解題思路</h2><p>直接跑迴圈若是和val相等則直接刪除～</p><h2 id="我滴程式碼"><a href="#我滴程式碼" class="headerlink" title="我滴程式碼"></a>我滴程式碼</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">removeElement</span>(<span class="params">self, nums: <span class="type">List</span>[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(i &lt; <span class="built_in">len</span>(nums)):</span><br><span class="line">            <span class="keyword">if</span> nums[i] == val:</span><br><span class="line">                <span class="keyword">del</span> nums[i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -1269,6 +1269,31 @@
     
     
     <entry>
+      <title>ROI(Region of Interest) pooling 筆記文章整理</title>
+      <link href="/2022/02/23/ob/pooling/"/>
+      <url>/2022/02/23/ob/pooling/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><a class="btn-beautify button--animated block right purple larger" href="https://essen900718.github.io/2022/02/23/ob/objectdetection/"   title="OB前言筆記整理"><i class="far fa-hand-point-right fa-fw"></i><span>OB前言筆記整理</span></a><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容原文於文末參考</p></div><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>region proposal：給定一張輸入image找出所有objects可能存在的位置。這一階段的輸出是所有object可能位置的bounding box，這些通常稱之為region proposals或者 regions of interest（ROI）</p><p>產生大量的region proposals 會導致performance problems，很難達到實時目標檢測，也就是RCNN所存在的問題。在處理速度方面是suboptimal。無法做到end-to-end training。這就是ROI pooling提出的根本原因。</p><p>ROI pooling層能實現training和testing的顯著加速，並提高檢測accuracy。該層有兩個輸入：從具有多個卷積核池化的深度網路中獲得的固定大小的feature maps</p><h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p>ROI pooling具體操作如下：</p><ol><li>根據輸入image，將ROI對映到feature map對應位置，對映是根據image縮小的尺寸來的</li><li>按照ROI Pooling輸出的資料的座標，將其對映到上一步中對映的feature區域上，這樣就將原來feature map上的ROI對映劃分成了幾個sections（sections數量與輸出的維度（pooled_w*pooled_h）相同)</li><li>對每個sections進行max pooling操作</li></ol><p>下圖為單幅圖片上4個ROI的示例。實際的Fast R-CNN可能會生成成百上千個這樣的ROI框。<br><img src="/img/article/ob/8.png" alt="ob"></p><div class="note danger modern"><p>ROI不是Bounding Box，它們看起來很相似，但是ROI還需要經過進一步的處理才能生成Bounding Box。</p></div><p><img src="/img/article/ob/10.png" alt="ob"><br>如上圖所示，每個ROI都有自己的座標和大小。為方便說明問題，我們只關注其中一個ROI，其它的都是一樣的。<br><img src="/img/article/ob/8.png" alt="ob"><br>該ROI的大小為145×200，在原始影象中左上角的座標為192×296，為了將該ROI投射到Feature Map上，我們需要將ROI的大小和位置對應縮放到原始大小的1/32。</p><ul><li>width: 200/32 = 6.25</li><li>height: 145/32 = ~4.53</li><li>x: 296/32 = 9.25</li><li>y: 192/32 = 6<br>可以看到，只有y座標值是可以被整除的，其它數值都是浮點數。影象的畫素是不存在浮點數的，因此有一個 Quantization 的操作。</li></ul><div class="note default no-icon flat"><p>Quantization是將連續的取值轉換為有限的多個離散值的過程。</p></div><p><img src="/img/article/ob/11.png" alt="ob"><br>紅色框框是原來算出來的結果，橘色矩形是Quantization後的結果<br>Quantization ROI相對於原始的ROI缺失了深藍色的區域，多了綠色的區域。也就是說Quantization ROI與原始的ROI覆蓋的區域已經不一致了。<br>ROI Align可以解決Quantization ROI與原始的ROI覆蓋的區域不同的問題，這裡我們暫不關心這個差異。</p><p><strong>為什麼要使用ROI Pooling呢？</strong><br>原因是ROI Pooling Layer之後的Fully Connected Layer的輸入是固定，所以需要通過ROI Pooling將所有的ROI變成固定大小。<br><img src="/img/article/ob/12.png" alt="ob"><br>在Fast RCNN中，將Selective Search完成後得到的region proposal映射在feature map上<br>ROI的特點是輸入的尺寸不固定，但輸出的尺寸是固定的<br><img src="/img/article/ob/13.png" alt="ob"></p><h2 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h2><p>這裡Quantization ROI大小為4x6x512，Fully Connect Layer的輸入大小為3x3x512。<br><img src="/img/article/ob/14.png" alt="ob"><br>Height方向上：4 / 3 = 1.33<br>Width方向上: 6 / 3 = 2<br>再次應用Quantization操作，對每個1×2塊應用Max Pooling操作，最終生成3×3的Pooling ROI。<br><img src="/img/article/ob/15.png" alt="ob"><br>由於應用了Quantization向下取整，ROI中最後一行資料再次被丟棄了。(還有另外一種非等分的保留所有資料的做法，應該都是可以的)<br><img src="/img/article/ob/16.png" alt="ob"><br>完整的ROI Pooling過程如下：<br><img src="/img/article/ob/17.png" alt="ob"><br>ROI Pooling最終生成的結果是這樣的：<br><img src="/img/article/ob/18.png" alt="ob"><br>至此，一個ROI的ROI Pooling過程完成了。使用同樣的步驟對剩下的ROI應用ROI Pooling，從而生成成百上千個3x3x512的Matrix。這些生成的Matrix被送入Fully Connect Layer，繼續進行後續的Bounding Box生成和分類預測。</p><h2 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h2><p>這個例子中假設Feature Map的大小為8×8(如下圖所示)，ROI Pooling後的ROI大小為2×2。<br><img src="/img/article/ob/19.png" alt="ob"><br>假設我們有一個Region Proposal，左上和右下角座標分別為(0,3)和(7,8)，如下圖所示：<br>（左上角為(0,0)右下角為(8,8))<br><img src="/img/article/ob/20.png" alt="ob"><br>這裡ROI的width和Height均不能被2(ROI Pooling輸出的大小)整除，上一個ROI Pooling處理方法中，直接向下取整，把餘下的資料丟棄了。這裡的處理方法保留所有資料。<br><img src="/img/article/ob/21.png" alt="ob"><br>對每個Pooling Section應用Max Pooling。<br><img src="/img/article/ob/22.png" alt="ob"><br>最後ROI Pooling如下：<br><img src="/img/article/ob/23.png" alt="ob"><br><img src="/img/article/ob/24.png" alt="ob"></p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li><a href="https://www.itread01.com/content/1541159488.html">關於ROI Pooling Layer的解讀</a></li><li><a href="https://www.gushiciku.cn/pl/g2pN/zh-tw">深入理解ROI Pooling</a></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> ObjectDetection </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RCNN、Fast-RCNN、Faster-RCNN 筆記文章整理</title>
       <link href="/2022/02/23/ob/rcnn/"/>
       <url>/2022/02/23/ob/rcnn/</url>
@@ -1288,31 +1313,6 @@
             <tag> OB </tag>
             
             <tag> RCNN </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ROI(Region of Interest) pooling 筆記文章整理</title>
-      <link href="/2022/02/23/ob/pooling/"/>
-      <url>/2022/02/23/ob/pooling/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><a class="btn-beautify button--animated block right purple larger" href="https://essen900718.github.io/2022/02/23/ob/objectdetection/"   title="OB前言筆記整理"><i class="far fa-hand-point-right fa-fw"></i><span>OB前言筆記整理</span></a><div class="note primary danger flat"><p>這篇文章是學習時整理的一些筆記，讓自己複習時方便，文章內容原文於文末參考</p></div><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>region proposal：給定一張輸入image找出所有objects可能存在的位置。這一階段的輸出是所有object可能位置的bounding box，這些通常稱之為region proposals或者 regions of interest（ROI）</p><p>產生大量的region proposals 會導致performance problems，很難達到實時目標檢測，也就是RCNN所存在的問題。在處理速度方面是suboptimal。無法做到end-to-end training。這就是ROI pooling提出的根本原因。</p><p>ROI pooling層能實現training和testing的顯著加速，並提高檢測accuracy。該層有兩個輸入：從具有多個卷積核池化的深度網路中獲得的固定大小的feature maps</p><h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps"></a>Steps</h2><p>ROI pooling具體操作如下：</p><ol><li>根據輸入image，將ROI對映到feature map對應位置，對映是根據image縮小的尺寸來的</li><li>按照ROI Pooling輸出的資料的座標，將其對映到上一步中對映的feature區域上，這樣就將原來feature map上的ROI對映劃分成了幾個sections（sections數量與輸出的維度（pooled_w*pooled_h）相同)</li><li>對每個sections進行max pooling操作</li></ol><p>下圖為單幅圖片上4個ROI的示例。實際的Fast R-CNN可能會生成成百上千個這樣的ROI框。<br><img src="/img/article/ob/8.png" alt="ob"></p><div class="note danger modern"><p>ROI不是Bounding Box，它們看起來很相似，但是ROI還需要經過進一步的處理才能生成Bounding Box。</p></div><p><img src="/img/article/ob/10.png" alt="ob"><br>如上圖所示，每個ROI都有自己的座標和大小。為方便說明問題，我們只關注其中一個ROI，其它的都是一樣的。<br><img src="/img/article/ob/8.png" alt="ob"><br>該ROI的大小為145×200，在原始影象中左上角的座標為192×296，為了將該ROI投射到Feature Map上，我們需要將ROI的大小和位置對應縮放到原始大小的1/32。</p><ul><li>width: 200/32 = 6.25</li><li>height: 145/32 = ~4.53</li><li>x: 296/32 = 9.25</li><li>y: 192/32 = 6<br>可以看到，只有y座標值是可以被整除的，其它數值都是浮點數。影象的畫素是不存在浮點數的，因此有一個 Quantization 的操作。</li></ul><div class="note default no-icon flat"><p>Quantization是將連續的取值轉換為有限的多個離散值的過程。</p></div><p><img src="/img/article/ob/11.png" alt="ob"><br>紅色框框是原來算出來的結果，橘色矩形是Quantization後的結果<br>Quantization ROI相對於原始的ROI缺失了深藍色的區域，多了綠色的區域。也就是說Quantization ROI與原始的ROI覆蓋的區域已經不一致了。<br>ROI Align可以解決Quantization ROI與原始的ROI覆蓋的區域不同的問題，這裡我們暫不關心這個差異。</p><p><strong>為什麼要使用ROI Pooling呢？</strong><br>原因是ROI Pooling Layer之後的Fully Connected Layer的輸入是固定，所以需要通過ROI Pooling將所有的ROI變成固定大小。<br><img src="/img/article/ob/12.png" alt="ob"><br>在Fast RCNN中，將Selective Search完成後得到的region proposal映射在feature map上<br>ROI的特點是輸入的尺寸不固定，但輸出的尺寸是固定的<br><img src="/img/article/ob/13.png" alt="ob"></p><h2 id="Method-1"><a href="#Method-1" class="headerlink" title="Method 1"></a>Method 1</h2><p>這裡Quantization ROI大小為4x6x512，Fully Connect Layer的輸入大小為3x3x512。<br><img src="/img/article/ob/14.png" alt="ob"><br>Height方向上：4 / 3 = 1.33<br>Width方向上: 6 / 3 = 2<br>再次應用Quantization操作，對每個1×2塊應用Max Pooling操作，最終生成3×3的Pooling ROI。<br><img src="/img/article/ob/15.png" alt="ob"><br>由於應用了Quantization向下取整，ROI中最後一行資料再次被丟棄了。(還有另外一種非等分的保留所有資料的做法，應該都是可以的)<br><img src="/img/article/ob/16.png" alt="ob"><br>完整的ROI Pooling過程如下：<br><img src="/img/article/ob/17.png" alt="ob"><br>ROI Pooling最終生成的結果是這樣的：<br><img src="/img/article/ob/18.png" alt="ob"><br>至此，一個ROI的ROI Pooling過程完成了。使用同樣的步驟對剩下的ROI應用ROI Pooling，從而生成成百上千個3x3x512的Matrix。這些生成的Matrix被送入Fully Connect Layer，繼續進行後續的Bounding Box生成和分類預測。</p><h2 id="Method-2"><a href="#Method-2" class="headerlink" title="Method 2"></a>Method 2</h2><p>這個例子中假設Feature Map的大小為8×8(如下圖所示)，ROI Pooling後的ROI大小為2×2。<br><img src="/img/article/ob/19.png" alt="ob"><br>假設我們有一個Region Proposal，左上和右下角座標分別為(0,3)和(7,8)，如下圖所示：<br>（左上角為(0,0)右下角為(8,8))<br><img src="/img/article/ob/20.png" alt="ob"><br>這裡ROI的width和Height均不能被2(ROI Pooling輸出的大小)整除，上一個ROI Pooling處理方法中，直接向下取整，把餘下的資料丟棄了。這裡的處理方法保留所有資料。<br><img src="/img/article/ob/21.png" alt="ob"><br>對每個Pooling Section應用Max Pooling。<br><img src="/img/article/ob/22.png" alt="ob"><br>最後ROI Pooling如下：<br><img src="/img/article/ob/23.png" alt="ob"><br><img src="/img/article/ob/24.png" alt="ob"></p><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol><li><a href="https://www.itread01.com/content/1541159488.html">關於ROI Pooling Layer的解讀</a></li><li><a href="https://www.gushiciku.cn/pl/g2pN/zh-tw">深入理解ROI Pooling</a></li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> ObjectDetection </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OB </tag>
             
         </tags>
       
@@ -1546,9 +1546,9 @@
       
         <tags>
             
-            <tag> contest </tag>
-            
             <tag> Google map API </tag>
+            
+            <tag> contest </tag>
             
         </tags>
       
@@ -1765,7 +1765,7 @@
       <link href="/2021/08/17/share/hexofatal/"/>
       <url>/2021/08/17/share/hexofatal/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/Users/isadora/Desktop/Blog/node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal/child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#x79;&#111;&#x75;&#x72;&#95;&#101;&#x6d;&#97;&#105;&#108;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">&#x79;&#111;&#x75;&#x72;&#95;&#101;&#x6d;&#97;&#105;&#108;&#64;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;</a></strong>是要打自己的email喔！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/home/you/.ssh/id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /home/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /home/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="note danger modern"><p>此解決方法不一定是正確的解法，只是試了各種方法這個方法行得通～</p></div><p>昨天想要更新部落格的時候突然失敗了嗚嗚嗚<br>失敗原因如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (/Users/isadora/Desktop/Blog/node_modules/hexo-util/lib/spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (node:events:394:28)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (node:internal/child_process:290:12) &#123;</span><br><span class="line">    code: 128</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#x27;s wrong. Maybe you can find the solution here: %s https://hexo.io/docs/troubleshooting.html</span><br></pre></td></tr></table></figure><p>突然想到前陣子在更新的時候有一次也是突然出現了這個失敗訊息，不過那時候我的解法是把整個倉庫刪掉重建，不知道怎麼搞的突然就好了，但是這次好像就沒有那麼幸運了嗚嗚 </p><p>我就重複上次的步驟把倉庫刪掉重建一次但是還是失敗了，還因此喪失了我的寶貴提交紀錄嗚嗚嗚，還記得原本有一百多次呢哭哭</p><p>後來我上網查，發現好多人也有類似的問題，也是突然佈署失敗<br>有人說是公鑰問題，或是佈署地點設置問題，也有人說是<a href="https://www.ithome.com.tw/news/146185">github在認證方面做了調整</a></p><p>最後的解決辦法是設置ssh啦～</p><h2 id="解決辦法"><a href="#解決辦法" class="headerlink" title="解決辦法"></a>解決辦法</h2><h3 id="尋找-ssh資料夾"><a href="#尋找-ssh資料夾" class="headerlink" title="尋找.ssh資料夾"></a>尋找.ssh資料夾</h3><p>先找找你是否有 .ssh 的隱藏資料夾</p><div class="note danger modern"><p>如果是直接找資料夾的朋友檔案總管、finder記得要打開顯示隱藏的檔案才找得到喔！</p></div><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~/.ssh</span><br></pre></td></tr></table></figure><h3 id="生成密鑰"><a href="#生成密鑰" class="headerlink" title="生成密鑰"></a>生成密鑰</h3><p><strong><a href="mailto:&#121;&#x6f;&#x75;&#114;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x6f;&#x75;&#114;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></strong>是要打自己的email喔！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure><p>輸入後接著會看到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/home/you/.ssh/id_rsa):</span><br></pre></td></tr></table></figure><p><strong>/home/you/.ssh/id_rsa</strong> 不一定一樣<br>如果是要使用默認的位置直接按enter即可</p><p>接著你會看到：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): </span><br><span class="line">Enter same passphrase again: </span><br></pre></td></tr></table></figure><p>如果不要設置的話也可以直接按enter喔！</p><p>接著看到這個就生成成功啦！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /home/you/.ssh/id_rsa.</span><br><span class="line">Your public key has been saved in /home/you/.ssh/id_rsa.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">…………………此處是密鑰內容…………………… your_email@example.com</span><br></pre></td></tr></table></figure><h3 id="設置密鑰"><a href="#設置密鑰" class="headerlink" title="設置密鑰"></a>設置密鑰</h3><p>接著你可以去.ssh資料夾內有一個<code>id_rsa.pub</code>的檔案，將裡面的內容全選後複製</p><p>再來到你的github部落格倉庫的設定中點擊 Settings –&gt; Deploy keys –&gt; Add deploy key<br>將剛剛複製的內容貼上去，並且記得要勾選下方個勾勾（不然沒辦法access會失敗喔）！</p><h3 id="測試配置"><a href="#測試配置" class="headerlink" title="測試配置"></a>測試配置</h3><p>接著在終端機輸入以下內容來測試一下配置是否成功</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure><p>得到以下回應就是成功啦！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hi username! You&#x27;ve successfully authenticated, but GitHub does not</span><br><span class="line">provide shell access.</span><br></pre></td></tr></table></figure><h3 id="設定提交位置"><a href="#設定提交位置" class="headerlink" title="設定提交位置"></a>設定提交位置</h3><p>接著在部落格配置文件中修改一下提交地址：</p><p><code>username</code>是自己的github id喔！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:username/username.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><h3 id="ssh中新增config-yml"><a href="#ssh中新增config-yml" class="headerlink" title=".ssh中新增config.yml"></a>.ssh中新增config.yml</h3><p>這一個步驟其實我也不知道到底要不要做，或是會不會影響什麼，不過我因為是嘗試所有的方法才成功的所以我是有做這個步驟的～<a href="https://1187100546.github.io/2019/11/24/spawn-failed/">參考</a> <a href="https://blog.csdn.net/qq_35687547/article/details/101903299?utm_medium=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2~default~BlogCommendFromMachineLearnPai2~default-1.control">參考</a></p><p>在.ssh新增config.yml並新增以下內容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 你GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port 443</span><br></pre></td></tr></table></figure><p>接著應該就可以成功啦！！</p><h2 id="小小心得"><a href="#小小心得" class="headerlink" title="小小心得"></a>小小心得</h2><p>其實第一次遇到這個問題的時候我那時候印象中我也有執行生成密鑰這個步驟，不過僅局限於”生成“哈哈，因為後面我就沒繼續了，最後我是把整個倉庫刪掉重建才得以解決的<br>不過昨天又再一次遇到了這個問題，剛開始碰到超級崩潰，網路搜尋了好多種方法，大家解法雖然不外乎就是那幾種，但小細節上還是不一樣的，所以搞得我好矇哭哭<br>最後是看到網路上佈署是用ssh佈署的所以嘗試了一下，終於成功了！！炒雞開心呀！！</p><p>雖然成功了，不過還是要說一下，其實具體到底什麼原因我也不知道，會不會再出現這個問題我不知道QQ<br>再加上網路上大神解法都還是有一點點的差異，所以還是要仔細看一下錯誤是否一樣，也要大概了解一下每個步驟到底在幹嘛！（搜尋hexo d 佈署失敗或是 error spawned就會有很多相關文章啦！）</p><h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><ol><li><a href="https://1187100546.github.io/2019/11/24/spawn-failed/">hexo发生error：spawn failed错误的解决方法</a></li><li><a href="https://segmentfault.com/a/1190000005125610">设置 SSH 使用 hexo deploy 时免输用户名密码</a></li><li><a href="https://dotblogs.com.tw/AceLee/2018/02/25/113946">GitHub 認證失敗，無法從遠端抓取資料</a></li></ol>]]></content>
       
       
       <categories>
@@ -2360,13 +2360,13 @@
       
         <tags>
             
-            <tag> contest </tag>
-            
-            <tag> Google map API </tag>
-            
             <tag> Ionic </tag>
             
             <tag> Angular </tag>
+            
+            <tag> Google map API </tag>
+            
+            <tag> contest </tag>
             
         </tags>
       
